@@ -3,33 +3,34 @@
 	name = mohammadraziei
 [color "status"]
    	added = green
-    	changed = yellow
-    	untracked = red
+   	changed = yellow
+   	untracked = red
 [push]
-    	default = current
+   	default = current
 [core]
-    	autocrlf = input
-    	pager = less -FRSX
+   	autocrlf = input
+   	pager = less -FRSX
 	editor = vim
 	excludesfile = ~/.gitignore_global
 [log]
-    	date = short
+   	date = short
 #	date = relative
 [alias]
 	st = status -sb
 #	ci = commit
 #	co = checkout
+	pm = push origin master
 	all = add --all
-    	graph = log --graph --oneline --decorate=short --branches='*'
+   	graph = log --graph --oneline --decorate=short --branches='*'
 	br = branch
 	df = diff --color-words='[^[:space:]]'
 	sh = show --color-words='[^[:space:]]'
 	lg = log -p
-    	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
-    	pend = cherry -v origin/master
+   	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+   	pend = cherry -v origin/master
 #	prefab = cherry -v origin/fabrication
 [format]
-    	pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
+   	pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
 
 [credential]
 	helper = cache --timeout 7200
