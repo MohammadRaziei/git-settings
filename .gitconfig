@@ -1,0 +1,35 @@
+[user]
+	email = mohammadraziei1375@gmail.com
+	name = mohammadraziei
+[color "status"]
+   	added = green
+    	changed = yellow
+    	untracked = red
+[push]
+    	default = current
+[core]
+    	autocrlf = input
+    	pager = less -FRSX
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[log]
+    	date = short
+#	date = relative
+[alias]
+	st = status -sb
+#	ci = commit
+#	co = checkout
+	all = add --all
+    	graph = log --graph --oneline --decorate=short --branches='*'
+	br = branch
+	df = diff --color-words='[^[:space:]]'
+	sh = show --color-words='[^[:space:]]'
+	lg = log -p
+    	serve = !git daemon --reuseaddr --verbose --base-path=. --export-all ./.git
+    	pend = cherry -v origin/master
+#	prefab = cherry -v origin/fabrication
+[format]
+    	pretty = '%C(yellow)%h%Creset %C(magenta)%cd%Creset %d %s'
+
+[credential]
+	helper = cache --timeout 7200
